@@ -2,10 +2,11 @@ import { APIGatewayProxyEvent, APIGatewayProxyEventPathParameters, APIGatewayPro
 
 export const getMockedEvent = (
     pathParams: APIGatewayProxyEventPathParameters = null,
-    queryParams: APIGatewayProxyEventQueryStringParameters =  null
+    queryParams: APIGatewayProxyEventQueryStringParameters =  null,
+    body: { [name: string]: any } = {}
 ): APIGatewayProxyEvent => {
     return {
-        body: JSON.stringify({}),
+        body: JSON.stringify(body),
         headers: {},
         multiValueHeaders: {},
         httpMethod: '',

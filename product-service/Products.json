@@ -1,0 +1,148 @@
+{
+    "Products": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "description": {
+                        "S": "Test description 7"
+                    },
+                    "id": {
+                        "S": "ea68ba32-46ee-11ed-b878-0242ac120002"
+                    },
+                    "price": {
+                        "N": "17"
+                    },
+                    "title": {
+                        "S": "Test title 7"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "description": {
+                        "S": "Test description 4"
+                    },
+                    "id": {
+                        "S": "ea68b62c-46ee-11ed-b878-0242ac120002"
+                    },
+                    "price": {
+                        "N": "14"
+                    },
+                    "title": {
+                        "S": "Test title 4"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "description": {
+                        "S": "Test description 2"
+                    },
+                    "id": {
+                        "S": "ea68b37a-46ee-11ed-b878-0242ac120002"
+                    },
+                    "price": {
+                        "N": "12"
+                    },
+                    "title": {
+                        "S": "Test title 2"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "description": {
+                        "S": "Test description 5"
+                    },
+                    "id": {
+                        "S": "ea68b78a-46ee-11ed-b878-0242ac120002"
+                    },
+                    "price": {
+                        "N": "15"
+                    },
+                    "title": {
+                        "S": "Test title 5"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "description": {
+                        "S": "Test description 3"
+                    },
+                    "id": {
+                        "S": "ea68b4f6-46ee-11ed-b878-0242ac120002"
+                    },
+                    "price": {
+                        "N": "13"
+                    },
+                    "title": {
+                        "S": "Test title 3"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "description": {
+                        "S": "Test description 6"
+                    },
+                    "id": {
+                        "S": " ea68b8de-46ee-11ed-b878-0242ac120002"
+                    },
+                    "price": {
+                        "N": "16"
+                    },
+                    "title": {
+                        "S": "Test title 6"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "description": {
+                        "S": "Test description 8"
+                    },
+                    "id": {
+                        "S": "ea68bc3a-46ee-11ed-b878-0242ac120002"
+                    },
+                    "price": {
+                        "N": "18"
+                    },
+                    "title": {
+                        "S": "Test title 8"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "description": {
+                        "S": "Test description 1"
+                    },
+                    "id": {
+                        "S": "ea68ac2c-46ee-11ed-b878-0242ac120002"
+                    },
+                    "price": {
+                        "N": "11"
+                    },
+                    "title": {
+                        "S": "Test title 1"
+                    }
+                }
+            }
+        }
+    ]
+}

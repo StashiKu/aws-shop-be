@@ -8,13 +8,13 @@ import { Product } from '../../types/Products';
 export const handler: APIGatewayProxyHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
   console.log('getProductById event: ' + JSON.stringify(event));
   
-  const { id } = event.pathParameters;
-
-  if (!id) {
-    throw new BadRequestError(`Please provide an id as path parameter. E.g. products/{id}.`);
-  }
-
   try {
+    const { id } = event.pathParameters;
+  
+    if (!id) {
+      throw new BadRequestError(`Please provide an id as path parameter. E.g. products/{id}.`);
+    }
+
     const product: Product = await getProductById(id);
 
     if (!product) {

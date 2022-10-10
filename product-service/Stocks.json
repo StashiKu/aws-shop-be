@@ -1,0 +1,94 @@
+{
+    "Stocks": [
+        {
+            "PutRequest": {
+                "product_id": {
+                    "S": "ea68ba32-46ee-11ed-b878-0242ac120002"
+                },
+                "count": {
+                    "N": "2"
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "product_id": {
+                    "S": "ea68b62c-46ee-11ed-b878-0242ac120002"
+                },
+                "count": {
+                    "N": "5"
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "product_id": {
+                    "S": "ea68b37a-46ee-11ed-b878-0242ac120002"
+                },
+                "count": {
+                    "N": "1"
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "product_id": {
+                    "S": "ea68b78a-46ee-11ed-b878-0242ac120002"
+                },
+                "count": {
+                    "N": "3"
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "product_id": {
+                    "S": "ea68b4f6-46ee-11ed-b878-0242ac120002"
+                },
+                "count": {
+                    "N": "6"
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "product_id": {
+                    "S": "edbd1276-47cc-11ed-b878-0242ac120002"
+                },
+                "count": {
+                    "N": "11"
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "product_id": {
+                    "S": " ea68b8de-46ee-11ed-b878-0242ac120002"
+                },
+                "count": {
+                    "N": "0"
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "product_id": {
+                    "S": "ea68bc3a-46ee-11ed-b878-0242ac120002"
+                },
+                "count": {
+                    "N": "9"
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "product_id": {
+                    "S": "ea68ac2c-46ee-11ed-b878-0242ac120002"
+                },
+                "count": {
+                    "N": "7"
+                }
+            }
+        }
+    ]
+}
