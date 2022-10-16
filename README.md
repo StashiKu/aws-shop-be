@@ -14,5 +14,10 @@
  - `dotenv` manages env variables
  - `serverless-dotenv-plugin` automatically upload env variable to environment section in config
  - `es-lint`
+
+ ### 2. import-service
+  Functionality:
+  - `importFileParser`: uses a readable stream to get an object from S3, parse it using csv-parser package and log each record to be shown in CloudWatch
+  - `importProdudctsFile`: creates a new Signed URL with the following key: uploaded/${fileName} https://rr6vcmvbp1.execute-api.eu-west-1.amazonaws.com/dev/import
  
 [product-service]: <https://cux94n1pu4.execute-api.eu-west-1.amazonaws.com/swagger>
