@@ -1,13 +1,15 @@
 import { APIGatewayProxyResult } from "aws-lambda";
 import * as Joi from "joi";
+import { ProductDTO, ProductUI } from "src/types/Products";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatJsonResponse = (statusCode: number, body: {[key: string]: any}): APIGatewayProxyResult => ({
     statusCode,
     body: JSON.stringify(body),
     headers: {
+        'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': true
+        'Access-Control-Allow-Credentials': true,
     }
 });
 
@@ -22,9 +24,9 @@ export const validateRequest = (schema: Joi.ObjectSchema<any>, objectToValidate:
     }
 
     return [];
-  }
+}
 
-export const formatProduct = (product) => {
+export const formatProduct = (product: ProductDTO) => {
     const { 
         ID: id,
         DESCRIPTION: description,
@@ -33,4 +35,16 @@ export const formatProduct = (product) => {
         PRICE: price } = product;
 
     return { id, description, title, count, price };
+}
+
+export const formatProductForDB = (product: ProductUI) => {
+  const {
+    id: ID,
+    description: DESCRIPTION,
+    title: TITLE,
+    count: COUNT,
+    price: PRICE
+  } = product;
+
+  return { ID, DESCRIPTION, TITLE, COUNT, PRICE };
 }

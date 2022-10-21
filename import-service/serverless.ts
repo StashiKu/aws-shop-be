@@ -1,6 +1,6 @@
 import type { AWS } from '@serverless/typescript';
-import importProductsFile from '@functions/importProductsFile'
-import importFileParser from '@functions/importFileParser'
+import importProductsFile from '@functions/importProductsFile';
+import importFileParser from '@functions/importFileParser';
 
 const serverlessConfiguration: AWS = {
   service: 'import-service',
@@ -22,6 +22,9 @@ const serverlessConfiguration: AWS = {
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
       NODE_OPTIONS: '--enable-source-maps --stack-trace-limit=1000',
+      CATALOG_ITEMS_QUEUE_URL: {
+        'Fn::ImportValue': 'CatalogItemQueueUrl'
+      }
     },
     iamRoleStatements: [
       {
@@ -40,6 +43,13 @@ const serverlessConfiguration: AWS = {
         Effect: 'Allow',
         Action: ['S3:*'],
         Resource: 'arn:aws:s3:::product-csv/*'
+      },
+      {
+        Effect: 'Allow',
+        Action: 'sqs:*',
+        Resource: {
+          'Fn::ImportValue': 'CatalogItemQueueArn'
+        }
       }
     ]
   },
