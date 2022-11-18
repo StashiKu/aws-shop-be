@@ -58,6 +58,36 @@ const serverlessConfiguration: AWS = {
     importProductsFile,
     importFileParser
   },
+  resources: {
+    Resources: {
+      GatewayResponseAccessDenied401: {
+        Type: 'AWS::ApiGateway::GatewayResponse',
+        Properties: {
+          ResponseParameters: {
+              'gatewayresponse.header.Access-Control-Allow-Origin': "'*'",
+              'gatewayresponse.header.Access-Control-Allow-Headers': "'*'"
+          },
+          ResponseType: 'ACCESS_DENIED',
+          RestApiId: {
+              Ref: 'ApiGatewayRestApi'
+          }
+        },
+      },
+      GatewayResponseUnauthorized403: {
+        Type: 'AWS::ApiGateway::GatewayResponse',
+        Properties: {
+          ResponseParameters: {
+              'gatewayresponse.header.Access-Control-Allow-Origin': "'*'",
+              'gatewayresponse.header.Access-Control-Allow-Headers': "'*'"
+          },
+          ResponseType: 'UNAUTHORIZED',
+          RestApiId: {
+              Ref: 'ApiGatewayRestApi'
+          }
+        },
+      },
+    },
+  },
   package: { individually: true },
   custom: {
     esbuild: {
